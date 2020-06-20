@@ -1,12 +1,12 @@
 #ifndef FIGHTERS_H
 #define FIGHTERS_H
-
+void card();
 class knight{
 	private:
 	int atck=50;
 	int matck=80;
 	int dfndk=10;
-	int healk=30;
+	int healk=50;
 	public:
 	int enh =2000;
 	void intro();
@@ -38,7 +38,7 @@ class ninja{
 	int atck=100;
 	int matck=180;
 	int dfndk=25;
-	int healk=30;
+	int healk=80;
 	public:
 	int enh=1400;
 	void intro();
@@ -55,7 +55,7 @@ class giant{
 	int dfndk=100;
 	int healk=40;
 	public:
-	int enh=2000;
+	int enh=2800;
 	void intro();
 	int attack(int ph);
 	int mega(int ph);
@@ -82,7 +82,7 @@ class witch{
 class samurai{
 	int atck=75;
 	int matck=200;
-	int dfndk=20;
+	int dfndk=50;
 	int healk=30;
 	public:
 	int enh=1500;
@@ -99,7 +99,7 @@ class robot{
 	int dfndk=50;
 	int healk=50;
 	public:
-	int enh=8000;
+	int enh=3000;
 	void intro();
 	int attack(int);
 	int mega(int);
@@ -111,7 +111,7 @@ class robot{
 class archer{
 	int atck=60;
 	int matck=150;
-	int dfndk=100;
+	int dfndk=80;
 	int healk=60;
 	public:
 	int enh=1500;
@@ -126,10 +126,10 @@ class archer{
 class zombie{
 	int atck=50;
 	int matck=100;
-	int dfndk=500;
+	int dfndk=50;
 	int healk=0;
 	public:
-	int enh=5000;
+	int enh=1000;
 	void intro();
 	int attack(int);
 	int mega(int);
@@ -140,11 +140,11 @@ class zombie{
 };
 class dragon{
 	int atck=500;
-	int matck=1000;
+	int matck=800;
 	int dfndk=200;
-	int healk=1000;
+	int healk=150;
 	public:
-	int enh=10000;
+	int enh=4000;
 	void intro();
 	int attack(int);
 	int mega(int);
@@ -204,7 +204,7 @@ class vampire{
 	int dfndk=100;
 	int healk=100;
 	public:
-	int enh=1800;
+	int enh=1200;
 	void intro();
 	int attack(int);
 	int mega(int);

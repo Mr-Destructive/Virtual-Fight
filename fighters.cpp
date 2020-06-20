@@ -4,6 +4,9 @@
 #include<ctime>
 using namespace std;
 
+void card(){
+cout<<" There are 15 Fighters in the game.\nYou can Play with Computer or watch the computer play with itself.\n Further you can choose between your selected fighter or let the computer select it for you randomly.\n\n   You have four option while in the match\n  i)  to ATTACK.\n  ii) to HEAL.         (only if you have less than                        600 health.)\niii)  use MEGA ATTACK .(only if you have done 500                        damage to your enemy.)\n iv)  to DEFEND .\n\n.";
+}
 void knight::intro(){
 cout<<" Trained by the kings of the battlefield,The hero of the arena,\nThe knight makes his way towards you! "<<endl;
 cout<<" The knight swings his sword out of the scabbard and swirls it around ,pretending to be ready to dash out!\n"<<endl;
@@ -32,7 +35,15 @@ int knight::damage(){
 int d=atck;
 return d;
 }
-
+void knight::card(){
+ cout<<"\t KNIGHT "<<endl;
+cout<<"Knight is armoured with toughest of shields and sharpest sword."<<endl;
+cout<<"HEALTH      :  2000 \n";
+cout<<"MAIN ATTACK :    50 \n";
+cout<<"MEGA ATTACK :    80 \n";
+cout<<"HEAL        :   +50 \n";
+cout<<"DEFEND      :   -10 \n";
+}
 
 
 void wizard::intro(){
@@ -64,7 +75,15 @@ int wizard::damage(){
 int d=atck;
 return d;
 }
-
+void wizard::card(){
+cout<<"\t WIZARD \n";
+cout<<"  WIZARD is a Magical spellcaster,\n He can cast spells and fireballs with unexpected damge.\n He can heal himself with healing potions and Thus,is very difficult to defeat.\n";
+cout<<"HEALTH      :  1300 \n";
+cout<<"MAIN ATTACK : 150-450 \n";
+cout<<"MEGA ATTACK :   300 \n";
+cout<<"HEAL        :  +200 \n";
+cout<<"DEFEND      :   -25 \n";
+}
 
 void ninja::intro(){
 cout<<"Trained by the forces of nature ,the ninja challenges you to a fight."<<endl;}
@@ -92,7 +111,15 @@ return h;
 int ninja::damage(){
 int d=atck;
 return d;}
-
+void ninja::card(){
+cout<<"\t NINJA \n";
+cout<<"Ninja is a very quick and thus does a ton of damage,Its quite sneaky as well.Tackle with him very smartly.\n";
+cout<<"HEALTH      :  1400 \n";
+cout<<"MAIN ATTACK :   100 \n";
+cout<<"MEGA ATTACK :   180 \n";
+cout<<"HEAL        :   +80 \n";
+cout<<"DEFEND      :   -25 \n";
+}
 
 
 void giant::intro(){
@@ -122,14 +149,24 @@ int giant::damage(){
 int d=atck;
 return d;
 }
+void giant::card(){
+cout<<"\t GIANT \n";
+cout<<"The Giant packs a punch of high damage with a sturdy high health.Its mega attack does a super damage and can knockout anyone ."<<endl;
+cout<<"HEALTH      :  2800 \n";
+cout<<"MAIN ATTACK :   200 \n";
+cout<<"MEGA ATTACK :   400 \n";
+cout<<"HEAL        :   +40 \n";
+cout<<"DEFEND      :  -100 \n";}
+
 void witch::intro(){
 cout<<"The magical spellcasting women enters the       battlefield,The Witch is ready to take you down!"<<endl;}
 int witch::attack(int ph){
 cout<<"Witch splashes some poisonous potions towards you!"<<endl;
 cout<<"You take a lot of damage ."<<endl;
 ph=ph-(atck*(rand()%2+1));
-cout<<"You are taking stacked damage due to poison."<<endl;
+cout<<"You are taking stacked damage due to poison.-20 -20 -20 -20."<<endl;
 ph=ph-80;
+cout<<"You take 80 extra damage!"<<endl;
 return ph;}
 int witch::mega(int ph){
 cout<<"Witch castes enchanted spells along with some poisonous and hazardous potions."<<endl<<"It has a toxic effect on your body.You take a great amount of damage."<<endl;
@@ -146,6 +183,15 @@ return h;}
 int witch::damage(){
 int d=atck;
 return d;
+}
+void witch::card(){
+cout<<"\t WITCH \n";
+cout<<"Witch is a super evil and dangerous to tackle with .\n Much similar to wizard,Their attacks can be variable and have super ability to heal themselve."<<endl;
+cout<<"HEALTH      :  1200 \n";
+cout<<"MAIN ATTACK : 120-320  \n";
+cout<<"MEGA ATTACK :   240 \n";
+cout<<"HEAL        :  +200 \n";
+cout<<"DEFEND      :   -40 \n";
 }
 
 void samurai::intro(){
@@ -170,6 +216,15 @@ return h;}
 int samurai::damage(){
 int d=atck;
 return d;
+}
+void samurai::card(){
+cout<<"\t SAMURAI \n";
+cout<<"Samurai is very similar to ninja but it has a well equiped armour and high attack damage."<<endl;
+cout<<"HEALTH      :  1500 \n";
+cout<<"MAIN ATTACK :    75 \n";
+cout<<"MEGA ATTACK :   200 \n";
+cout<<"HEAL        :   +30 \n";
+cout<<"DEFEND      :   -50 \n";
 }
 
 void robot::intro(){
@@ -196,6 +251,15 @@ int robot::damage(){
 int d=atck;
 return d;
 }
+void robot::card(){
+cout<<"\t ROBOT\n";
+cout<<" Robot is very high on heath and his attacks are super damaging ,thus it becomes very difficult to defeat him.\n";
+cout<<"HEALTH      :  3000 \n";
+cout<<"MAIN ATTACK :   100 \n";
+cout<<"MEGA ATTACK :   250 \n";
+cout<<"HEAL        :   +50 \n";
+cout<<"DEFEND      :   -50 \n";
+}
 
 void archer::intro(){
 cout<<"With the power of nature and sharp vision,The Archer symbolize himself with a bow and enters the battlefield!"<<endl;
@@ -220,7 +284,15 @@ int archer::damage(){
 int d=atck;
 return d;
 }
-
+void archer::card(){
+cout<<"\t ARCHER\n";
+cout<<"Archer,the eagle eyed warrior,he can deal a sneaky shot and has super natural powers."<<endl;
+cout<<"HEALTH      :  1500 \n";
+cout<<"MAIN ATTACK :    60 \n";
+cout<<"MEGA ATTACK :   150 \n";
+cout<<"HEAL        :   +60 \n";
+cout<<"DEFEND      :   -80 \n";
+}
 
 void zombie::intro(){
 cout<<"The undead creature has summoned in the battlefield,The Zombie is ready to take you to death."<<endl;}
@@ -244,6 +316,16 @@ int zombie::damage(){
 int d=atck;
 return d;
 }
+void zombie::card(){
+cout<<"\t ZOMBIE\n";
+cout<<"Zombie is a undead creature summoned by evil spirits and has low attack with no healing capabilities."<<endl;
+cout<<"HEALTH      :  1000 \n";
+cout<<"MAIN ATTACK :    50 \n";
+cout<<"MEGA ATTACK :   100 \n";
+cout<<"HEAL        :    +0 \n";
+cout<<"DEFEND      :   -50 \n";
+}
+
 
 
 void dragon::intro(){
@@ -271,6 +353,15 @@ int dragon::damage(){
 int d=atck;
 return d;
 }
+void dragon::card(){
+cout<<"\t DRAGON\n";
+cout<<"Dragon is a mythical beast with super high damage and humongous health,its almost impossible to defeat him."<<endl;
+cout<<"HEALTH      :  4000 \n";
+cout<<"MAIN ATTACK :   500 \n";
+cout<<"MEGA ATTACK :   800 \n";
+cout<<"HEAL        :  +150 \n";
+cout<<"DEFEND      :  -200 \n";
+}
 
 
 void pirate::intro(){
@@ -296,7 +387,15 @@ int pirate::damage(){
 int d=atck;
 return d;
 }
-
+void pirate::card(){
+cout<<"\t PIRATE\n";
+cout<<"Pirate,the captian of the ship and robbery ,they have high mega attacks powered by cannons and swords."<<endl;
+cout<<"HEALTH      :  1500 \n";
+cout<<"MAIN ATTACK :    75 \n";
+cout<<"MEGA ATTACK :   250 \n";
+cout<<"HEAL        :   +30 \n";
+cout<<"DEFEND      :   -50 \n";
+}
 
 void wrestler::intro(){
 cout<<"With a weight over 300 pounds and rage in body,The Wrestler enters the battlefield."<<endl; 
@@ -310,7 +409,7 @@ cout<<"The Wrestler lifts you up and smashes on the ground forcefully,You take c
 ph=ph-matck;
 return ph;}
 int wrestler::heal(int hk){
-cout<<"Tje Wrestler rests for a while, and succumbs his small injuries ."<<endl;
+cout<<"The Wrestler rests for a while, and succumbs his small injuries ."<<endl;
 hk=hk+healk;
 return hk;}
 int wrestler::defend(int h){
@@ -320,6 +419,15 @@ return h;}
 int wrestler::damage(){
 int d=atck;
 return d;
+}
+void wrestler::card(){
+cout<<"\t WRESTLER\n";
+cout<<"\n Wrestler ,he has a high health and punches super heavy damage,be careful while dealing with him."<<endl;
+cout<<"HEALTH      :  2500 \n";
+cout<<"MAIN ATTACK :   150 \n";
+cout<<"MEGA ATTACK :   300 \n";
+cout<<"HEAL        :   +50 \n";
+cout<<"DEFEND      :   -75 \n";
 }
 
 void bomber::intro(){
@@ -345,6 +453,15 @@ int bomber::damage(){
 int d=atck;
 return d;
 }
+void bomber::card(){
+cout<<"\t BOMBER\n";
+cout<<"\n Bomber ,he throws bombs! Bomber has a really high damage but health same as yours.He can really knockout a fighter within a few throws of doom!"<<endl;
+cout<<"HEALTH      :  1200 \n";
+cout<<"MAIN ATTACK :   250 \n";
+cout<<"MEGA ATTACK :   450 \n";
+cout<<"HEAL        :    +0 \n";
+cout<<"DEFEND      :   -30 \n";
+}
 
 void vampire::intro(){
 cout<<"With venom in minds and blood in bites,The Vampiress enter the arena."<<endl;
@@ -369,6 +486,15 @@ int vampire::damage(){
 int d=atck;
 return d;
 }
+void vampire::card(){
+cout<<"\t VAMPIRESS\n";
+cout<<"\n Vampire ,the assassian of night,the blood sucker can do a high damage but has a low health .She can even leech health from you."<<endl;
+cout<<"HEALTH      :  1200 \n";
+cout<<"MAIN ATTACK :   125 \n";
+cout<<"MEGA ATTACK :   300 \n";
+cout<<"HEAL        :  +100 \n";
+cout<<"DEFEND      :  -100 \n";
+}
 
 void hunter::intro(){
 cout<<"With guns in hand and beast in mind,The hunter is ready to knock you out of the battlefield."<<endl;
@@ -392,4 +518,13 @@ return h;}
 int hunter::damage(){
 int d=atck;
 return d;
+}
+void hunter::card(){
+cout<<"\t HUNTER\n\n";
+cout<<" Hunter,he can shoot bullets that deal high attack damage.Very low on healing and hasdecent health."<<endl;
+cout<<"HEALTH      :  1500 \n";
+cout<<"MAIN ATTACK :   120 \n";
+cout<<"MEGA ATTACK :   200 \n";
+cout<<"HEAL        :   +40 \n";
+cout<<"DEFEND      :   -20 \n";
 }

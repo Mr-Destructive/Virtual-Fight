@@ -21,7 +21,8 @@ do{
 int c1,c2,edmg1=0,edmg2=0,a1,a2,ti,e1,e2,t;
 std::cout<<"\tPLAY  : Hit 1 and Enter \n";
 std::cout<<"\tWATCH : Hit 2 and Enter \n";
-std::cout<<"\tEXIT  : Hit 3 and Enter \n";
+std::cout<<"\tINFO  : Hit 3 and Enter \n";
+std::cout<<"\tEXIT  : Hit 4 and Enter \n";
 std::cin>>pch;
 switch(pch){
 	case 1:{
@@ -132,11 +133,92 @@ watch(c2,c1,e2,e1,t);
 
 break;}}break;}}
 break;}
+case 3:{
+char fyn;
+int nf;
+std::cout<<"Welcome to Info Section.\n";
+card();
+do{
+std::cout<<"Do you want information of any fighter?   (y/n)"<<std::endl;
+std::cin>>fyn;
+switch(fyn){
+	case 'y':{
+std::cout<<"Which fighters information do you want?"<<std::endl;
+std::cout<<"Select fighter. \n"<<"Enter the number mentioned before your selected fighter.\n";
+std::cout<<" 1) Knight     2) Wizard     3) Ninja     \n 4) Giant      5) Witch      6) Samurai      \n 7) Robot      8) Archer     9) Zombie      \n10) Dragon    11) Pirate    12) Wrestler    \n13) Bomber    14) Vampire   15) Hunter\n";
+std::cin>>nf;
+switch(nf){
+	case 1:{
+	knight ob;
+	ob.card();
+	break;}
+	case 2:{
+	wizard ob;
+	ob.card();
+	break;}
 	case 3:{
+	ninja ob;
+	ob.card();
+	break;}
+	case 4:{
+	giant ob;
+	ob.card();
+	break;}
+	case 5:{
+	witch ob;
+	ob.card();
+	break;}
+	case 6:{
+	samurai ob;
+	ob.card();
+	break;}
+	case 7:{
+	robot ob;
+	ob.card();
+	break;}
+	case 8:{
+        archer ob;
+	ob.card();
+	break;}
+	case 9:{
+	zombie ob;
+	ob.card();
+	break;}
+	case 10:{
+	dragon ob;
+	ob.card();
+	break;}
+	case 11:{
+	pirate ob;
+	ob.card();
+	break;}
+	case 12:{
+	wrestler ob;
+	ob.card();
+	break;}
+	case 13:{
+	bomber ob;
+	ob.card();
+	break;}
+	case 14:{
+	vampire ob;
+	ob.card();
+	break;}
+	case 15:{
+	hunter ob;
+	ob.card();
+	break;}
+	}
+	 break;}
+	case 'n':{break;}
+}
+}while(fyn!='n');
+break;}
+case 4:{
 	std::cout<<"Hope you enjoyed \n";
 	break;}
 	}
-}while(pch!=3);
+}while(pch!=4);
 
 std::cout<<"Program terminated "<<std::endl;
 std::cout<<"Press any key to continue";
@@ -240,7 +322,7 @@ switch(com){
 	break;
 	}
         case 14:{
-	std::cout<<" VAMPIRE."<<std::endl;
+	std::cout<<" VAMPIRESS."<<std::endl;
 	vampire co1;
 	co1.intro();
 	e1=co1.enh;
@@ -356,7 +438,7 @@ case 5:{witch co1;
 	if(edmg1>=500){
 	e2=co1.mega(e2);
 	edmg1=0;
-	edmg1=edmg1+(co1.damage());;
+	edmg1=edmg1+(co1.damage());
 	}else{
 	e2=co1.attack(e2);
 	edmg1=edmg1+(co1.damage());}
@@ -560,7 +642,9 @@ case 14:{
 	edmg1=edmg1+(co1.damage());}
 	}
 else{
-if((a1==2)&&(e1<600)){e1=co1.heal(e1);}
+if((a1==2)&&(e1<600)){e1=co1.heal(e1);
+e2=e2-co1.heal(e1);
+}
 else{
 if((a1==3)&&(e1<co1.enh)){
 e1=co1.defend(e1);}
@@ -897,7 +981,8 @@ case 14:{
 	edmg2=edmg2+(co2.damage());}
 	}
 else{
-if((a1==2)&&(e2<600)){e2=co2.heal(e2);}
+if((a1==2)&&(e2<600)){e2=co2.heal(e2);
+e1=e1-(co2.heal(e2));}
 else{
 if((a1==3)&&(e2<co2.enh)){
 e2=co2.defend(e2);}
@@ -1294,7 +1379,8 @@ case 14:{
 	edmg=edmg+(co.damage());
 	}}
 	else{
-if((ec==2)&&(enemyh<600)){enemyh=co.heal(enemyh);}
+if((ec==2)&&(enemyh<600)){enemyh=co.heal(enemyh);
+plyhm=plyhm-(co.heal(enemyh));}
 else{
 if((ec==3)&&((pbc=='a')||(pbc=='m')))enemyh=co.defend(enemyh);
 else{
@@ -1634,7 +1720,8 @@ case 14:{
 	edmg=edmg+(co.damage());
 	}}
 	else{
-if((ec==2)&&(enemyh<600)){enemyh=co.heal(enemyh);}
+if((ec==2)&&(enemyh<600)){enemyh=co.heal(enemyh);
+plyhm=plyhm-(co.heal(enemyh));}
 else{
 if((ec==3)&&((pbc=='a')||(pbc=='m')))enemyh=co.defend(enemyh);
 else{
